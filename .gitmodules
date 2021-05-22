@@ -1,0 +1,6 @@
+[submodule "pdig"]
+	path = pdig
+	url = https://github.com/falcosecurity/pdig
+[submodule "libs"]
+	path = libs
+	url = https://github.com/falcosecurity/libs
