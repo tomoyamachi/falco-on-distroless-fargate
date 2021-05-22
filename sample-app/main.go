@@ -1,0 +1,23 @@
+package main
+
+import (
+	"fmt"
+	"log"
+	"os"
+	"time"
+)
+
+func main() {
+	for {
+		select {
+		case t := <-time.Tick(time.Second * 5):
+			filename := fmt.Sprintf("%v.txt", t.Unix())
+			f, err := os.Create(filename)
+			if err != nil {
+				log.Fatal(err)
+			}
+			f.Close()
+			log.Println("successfully create", filename)
+		}
+	}
+}
