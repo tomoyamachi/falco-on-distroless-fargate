@@ -34,7 +34,7 @@ func main() {
 }
 
 func genCmd(args []string) (cmd *exec.Cmd) {
-	if len(args) > 2 {
+	if len(args) > 1 {
 		cmd = exec.Command(args[0], args[1:]...)
 	} else {
 		cmd = exec.Command(args[0])

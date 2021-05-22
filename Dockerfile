@@ -1,5 +1,5 @@
-ARG FALCO=0.28.1
 FROM alpine:3 as builder
+ARG FALCO=0.28.1
 RUN apk add g++ gcc cmake cmake make libtool elfutils-dev libelf-static linux-headers
 COPY ./pdig /app/pdig
 COPY ./libs /app/libs
