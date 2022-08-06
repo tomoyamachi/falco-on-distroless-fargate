@@ -30,6 +30,5 @@ COPY --from=builder /usr/bin/falco /usr/bin/falco
 COPY --from=builder /app/pdig/build/pdig /usr/bin/pdig
 COPY --from=gobuilder /app /usr/bin/app
 COPY --from=trail /trail /usr/bin/trail
-COPY falco.yaml /etc/falco/falco.yaml
-COPY falco_rules.yaml /etc/falco/falco_rules.yaml
+COPY ./falco-setting /etc/falco
 ENTRYPOINT ["trail", "app"]
