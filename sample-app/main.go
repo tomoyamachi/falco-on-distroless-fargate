@@ -16,8 +16,11 @@ func main() {
 			if err != nil {
 				log.Fatal(err)
 			}
-			f.Close()
-			log.Println("successfully create", filename)
+			if err := f.Close(); err != nil {
+				log.Println("fail to close", filename)
+			} else {
+				log.Println("successfully create", filename)
+			}
 		}
 	}
 }
