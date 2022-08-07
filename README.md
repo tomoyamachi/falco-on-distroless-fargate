@@ -9,6 +9,7 @@ Only supports x86_64 arch.
 
 ```shell
 $ git clone https://github.com/tomoyamachi/falco-on-distroless-fargate --recursive
+$ git submodule update --init --recursive
 $ docker build -t falco-on-distroless .
 $ docker run --cap-add=SYS_PTRACE --rm -it falco-on-distroless
 ...
